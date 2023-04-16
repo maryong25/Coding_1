@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personalize this page</title>
+</head>
+
+
+<body>
+    <h1 > Personalize this page</h1>
+    <h2 id="textcolor">Hello World</h2>
+
+  <script>
+
+    //The program changes the color of the letters and the background
+    // 	Variables
+
+    let color; 	
+    console.log("color variable before:", color);
+
+    let backgroundcolor; 	
+    console.log("background color before:", backgroundcolor);
+
+
+    // 	Main Program
+    color = prompt("Please enter the letters color", "");
+    const myElement = document.getElementById("textcolor");
+    myElement.style.color = color;
+
+
+    console.log("color avriable after assigning:", backgroundcolor);
+
+    backgroundcolor = prompt("Please enter the brackground color", "");
+    document.body.style.background=backgroundcolor;
+
+
+  </script>
+
+</body>
+</html>
