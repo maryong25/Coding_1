@@ -44,7 +44,7 @@ function triangles(x, y) {
   
   fill(color2);
   triangle(x + 25, y + 30, x + 25, y - 25, x + 56, y);
-  triangle(x + 65, y + 5, x + 96, y - 30, x + 96, y + 30);
+  triangle(x + 65, y + 1, x + 96, y - 30, x + 96, y + 30);
 }
 
 
