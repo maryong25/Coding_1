@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  
+
+
+    <script>
+
+      //Concat method. First proposal
+
+        let arr1 = [1, 2, 3];
+        let arr2 = [4, 5, 6];
+
+       
+
+        console.log(arr3); 
+        
+
+        let arr3= [...arr1,...arr2];
+        console.log(arr3);
+
+
+        //Concat method. Second proposal, with hel of chat gpt
+
+
+        let arr1 = [1, 2, 3];
+        let arr2 = [4, 5, 6];
+        let arr3 = new Array(arr1.length + arr2.length);
+
+        
+        for (let i = 0; i < arr1.length; i++) {
+          arr3[i] = arr1[i];
+        }
+
+        
+        for (let i = 0; i < arr2.length; i++) {
+          arr3[arr1.length + i] = arr2[i];
+        }
+
+        console.log(arr3); // Output: [1, 2, 3, 4, 5, 6]
+    
+    </script>
+
+
+  </body>
+</html>
