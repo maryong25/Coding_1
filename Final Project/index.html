@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <!-- Meta tags -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Title -->
+        <title>Sproot. Memory Game</title>
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+        <!-- This is for the favicon error -->
+        <link rel="shortcut icon" href="#">
+
+        <!-- Audio -->
+        <audio id="flipSound">
+            <source src="Magic Scroll 3.wav" type="audio/wav">
+        </audio>
+        <audio id="matchSound">
+            <source src="MA_Stockboom_Angelic Game Event_Revealed.wav" type="audio/wav">
+        </audio>
+
+        <!-- JavaScript -->
+        <script src="javascript.js"></script>
+
+    </head>
+
+    <body>
+
+        <!-- Intro section -->
+        <div id="intro">
+            <img id="logoBig" src="Logobig.png">
+            <button onclick="hideIntro()" id="primaryButton"> I am ready to play</button>
+        </div>
+
+        <!-- Difficulty selection section -->
+        <div id="setDifficulty" style="display: none;" >
+            <img id="logolittle" src="logoiso.svg">
+            <span onclick="intro()" id="arrowBackButton"class="material-symbols-outlined">
+                arrow_back
+            </span>
+
+            <div id="containerInstructions">
+
+                <div id="instrutionsText">
+
+                    <h1>Are you a professional?</h1>
+                    <p>First choose the difficulty of the game</p>
+
+                </div>
+
+                <div id="buttonsContainer">
+                    <button onclick="chooseDifficulty('easy')" id="easy" class="secondaryButton"> Easy</button>
+                    <button onclick="chooseDifficulty('medium')" id="medium" class="secondaryButton">Medium</button>
+                    <button onclick="chooseDifficulty('hard')" id="hard" class="secondaryButton"> Hard</button>
+                    <button onclick="chooseDifficulty('extreme')" id="extreme" class="secondaryButton">Extremely Hard</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Player selection section -->
+        <div id="playerSelection" style="display: none;">
+            <img id="logolittle" src="logoiso.svg">
+            <span onclick="hideIntro()" id="arrowBackButton"class="material-symbols-outlined">
+                arrow_back
+            </span>
+
+            <div id="containerInstructions">
+
+                <div id="instrutionsText">
+                    <h1>Find friends to play</h1>
+                    <p>Choose the number or players</p>
+                </div>
+
+                <div>
+                    <button id="1Player" class="buttonsPlayers" onclick="setPlayers(1)">1</button>
+                    <button id="2Player" class="buttonsPlayers" onclick="setPlayers(2)">2</button>
+                    <button id="3Player" class="buttonsPlayers" onclick="setPlayers(3)">3</button>
+                    <button id="4Player" class="buttonsPlayers" onclick="setPlayers(4)">4</button>
+                    <button id="5Player" class="buttonsPlayers" onclick="setPlayers(5)">5</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Player names input section -->
+        <div id="playerNames" style="display: none;">
+            <img id="logolittle" src="logoiso.svg">
+            <span onclick="hideDifficulty()" id="arrowBackButton"class="material-symbols-outlined">
+                arrow_back
+            </span>
+
+            <div id="containerInstructions">
+                <div id="instrutionsText2">
+                    <h1>Who is playing?</h1>
+                    <p>Write the names of the players to continue</p>
+                </div>
+
+                <div>
+                    <div id="inputAndNumber">
+                        <div id="playerNumber"></div>
+                        <div id="playerInputs"></div>
+                    </div>
+
+                    <button id="startGame" onclick="startGame()" class="disabled-button" disabled>Start Game</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game started section -->
+        <div id="started" style="display: none;">
+            <div id="containerPlayers">
+                <div id="playerInfo">
+                    <div id="playerNumberContainer"></div>
+                    <div id="playerNamesContainer"></div>
+                    <div id="playerCardsMatched"></div>
+                </div>
+            </div>
+
+            <div id="gridContainer" >
+                <div class="card" data-card="1">
+                <div class="card-front"></div>
+                <div class="card-back">
+                    <img src="cardBack.png" alt="CardImage">
+                </div>
+                </div>
+            </div>
+
+            <div id="gameButtons">
+                <button id="restartGame" class="secondaryButton" onclick="restartGame()">Restart Game</button>
+                <button id="exitGame" class="secondaryButton" onclick="exitGame()">Exit Game</button>
+            </div>
+
+        </div>
+
+        <!-- End game section -->
+        <div id="endGame" style="display: none;">
+            <h2>Game Over!</h2>
+            <p id="winnerName"></p>
+            <button id="exitGame" class="secondaryButton" onclick="exitGame()">Exit Game</button>
+        </div>
+
+    </body>
+</html>
